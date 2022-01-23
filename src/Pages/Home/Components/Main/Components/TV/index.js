@@ -10,7 +10,7 @@ export const Tv = () => {
 					de Blu-ray e outros dispositivos.
 				</p>
 			</div>
-			<img src={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"}/>
+			<img src={"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"} alt="Tv"/>
 		</Container>
 	);
 }
