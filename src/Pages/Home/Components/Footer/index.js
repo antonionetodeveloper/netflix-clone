@@ -3,7 +3,7 @@ import {Container} from "./styles"
 export const Footer = () =>{
   return (
     <Container>
-			<p>Footer</p>
+			<p>CLONE feito por: Antônio Fernandes</p>
     </Container>
   );
 }
