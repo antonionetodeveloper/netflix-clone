@@ -6,7 +6,7 @@ import {Button} from "../Assets/buttonSlide"
 export const Header = () =>{
   return (
     <Container>
-			<img src={logo}/>
+			<img src={logo} alt="Netflix"/>
       <Button>Entrar</Button>
     </Container>
   );
