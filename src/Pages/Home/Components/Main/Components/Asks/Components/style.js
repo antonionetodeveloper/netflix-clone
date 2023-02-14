@@ -32,7 +32,11 @@ export const Container = styled.div`
     position: relative;
     z-index: 2;
     bottom: 7.5vw;
-    animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    background-color: ${(props) => (props.wasClicked ? "red" : "blue")};
+    animation: ${(props) =>
+      props.wasClicked
+        ? "slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
+        : "slideOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"};
 
     .panel {
       padding: 3vw 18px 1vw;
@@ -52,6 +56,17 @@ export const Container = styled.div`
       opacity: 1;
     }
     0% {
+      transform: translateY(1vw);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateY(6vw);
+      opacity: 1;
+    }
+    100% {
       transform: translateY(1vw);
       opacity: 0;
     }

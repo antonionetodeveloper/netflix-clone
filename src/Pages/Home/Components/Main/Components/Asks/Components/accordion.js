@@ -16,15 +16,12 @@ export const Accordion = ({ question, answer }) => {
       <button className="accordion" onClick={() => setOpenQuestionHandle()}>
         <h3>{question}</h3>
       </button>
-      {isOpenQuestion ? (
-        <div className="panel-container" style={{ zIndex: 1 }}>
-          <div className="panel">
-            <p>{answer}</p>
-          </div>
+
+      <div className="panel-container" style={{ zIndex: 1 }}>
+        <div className="panel">
+          <p>{answer}</p>
         </div>
-      ) : (
-        <></>
-      )}
+      </div>
     </Container>
   );
 };
