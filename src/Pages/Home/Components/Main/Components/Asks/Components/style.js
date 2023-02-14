@@ -1,33 +1,59 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: #eee;
+    padding: 18px;
+    width: 70vw;
+    height: 7.5vw;
+    background-color: #303030;
+    text-align: center;
+    border-radius: 1vw;
+    transition: 0.4s;
+    color: white;
+    font-size: 3.5vw;
+    position: relative;
+    z-index: 3;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-	&{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+    :hover {
+      background-color: #ccc;
+      cursor: pointer;
+    }
+  }
 
-		width: 70vw;
-		height: 7.5vw;
-		
-		background-color: #303030;
-		text-align: center;
-		border-radius: 1vw;
-		:hover{
-			cursor: pointer;
-		}
-		
-		p{
-			font-size: 3.5vw;
-		}
-		div.answer{
-			display: ${
-				props => (props.id > 0) ? "flex" : "none" 
-			};
+  .panel-container {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    bottom: 7.5vw;
+    animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-			p{
-				font-size: 2vw;
-			}
-		}
-	}
+    .panel {
+      padding: 3vw 18px 1vw;
+      border-radius: 1vw;
+      overflow: hidden;
+      background-color: #505050;
+      width: 65vw;
+      display: flex;
+      justify-content: center;
+      text-align: justify;
+      font-size: 1.2vw;
+    }
+  }
+  @keyframes slideIn {
+    100% {
+      transform: translateY(6vw);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1vw);
+      opacity: 0;
+    }
+  }
 `;
