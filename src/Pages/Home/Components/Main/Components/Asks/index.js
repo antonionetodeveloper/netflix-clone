@@ -12,7 +12,7 @@ export const Asks = () => {
 		  Você pode assistir a quantos filmes e séries quiser, quando e onde quiser – tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes."
         />
         <Accordion
-          question="Quanto custa a  ?"
+          question="Quanto custa ?"
           answer="Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$18,90 a R$55,90 por mês. Sem contrato nem taxas extras."
         />
         <Accordion
